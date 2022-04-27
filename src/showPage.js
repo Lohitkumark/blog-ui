@@ -10,7 +10,7 @@ const ShowPage=(props)=>{
     const [comments, setComments] = useState([])
 
         useEffect(()=>{
-            axios.get(`http://jsonplaceholder.typicode.com/users/${id}`)
+            axios.get(`//jsonplaceholder.typicode.com/users/${id}`)
                 .then((response) =>{
                     const result = response.data
                     setUser(result)
@@ -22,7 +22,7 @@ const ShowPage=(props)=>{
         },[id])
 
         useEffect(()=>{
-            axios.get(`http://jsonplaceholder.typicode.com/posts/${id}`)
+            axios.get(`//jsonplaceholder.typicode.com/posts/${id}`)
                 .then((response) =>{
                     const result = response.data
                     setPosts(result)
@@ -34,7 +34,7 @@ const ShowPage=(props)=>{
         },[id])
 
         useEffect(()=>{
-            axios.get(`http://jsonplaceholder.typicode.com/comments?postId=${id}`)
+            axios.get(`//jsonplaceholder.typicode.com/comments?postId=${id}`)
                 .then((response) =>{
                     const result = response.data
                     setComments(result)

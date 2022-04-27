@@ -9,7 +9,7 @@ const UsersShow=(props)=>{
     const [posts, setPosts] = useState([])
 
     useEffect(()=>{
-        axios.get(`http://jsonplaceholder.typicode.com/users/${id}`)
+        axios.get(`//jsonplaceholder.typicode.com/users/${id}`)
             .then((response) =>{
                 const result = response.data
                 setUser(result)
@@ -20,7 +20,7 @@ const UsersShow=(props)=>{
     },[])
 
     useEffect(()=>{
-        axios.get(`http://jsonplaceholder.typicode.com/posts?userId=${id}`)
+        axios.get(`//jsonplaceholder.typicode.com/posts?userId=${id}`)
             .then((response) =>{
                 const result = response.data
                 setPosts(result)
